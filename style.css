@@ -20,19 +20,33 @@ html {
 body {
     min-height: 100vh;
     padding: 10px;
-    background-color: var(--background);
+    background: var(--background);
+     /* url('./public/bg_Image.png') no-repeat center center fixed;
+    background-size: cover; */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-h1 {
+/* h1 {
     margin: 100px 0 20px 0;
     font-size: 3rem;
     font-weight: 800;
     text-transform: uppercase;
     text-align: center;
     color: var(--accent-color);
+} */
+/* Gradient text using the colors from your image */
+h1 {
+    margin: 100px 0 20px 0;
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    background: linear-gradient(90deg, #9b59b6, var(--accent-color));
+    /* purple to blue */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .wrapper {
@@ -68,7 +82,8 @@ form {
     top: 0;
     right: 0;
 
-    background-color: var(--accent-color);
+    /* background-color: var(--accent-color); */
+    background: linear-gradient(90deg, #9b59b6, var(--accent-color));
     padding: 14px 20px;
     border: none;
     border-radius: 1000px;
@@ -78,7 +93,7 @@ form {
     cursor: pointer;
 }
 
-.todo{
+.todo {
     margin: 10px 0;
     padding: 0 16px;
     background-color: var(--primary-color);
@@ -87,14 +102,14 @@ form {
     align-items: center;
 }
 
-.todo .todo-text{
+.todo .todo-text {
     padding: 15px;
     padding-right: 0;
     flex-grow: 1;
     transition: 200ms ease;
 }
 
-.delete-button{
+.delete-button {
     background: transparent;
     border: none;
     padding: 8px;
@@ -104,15 +119,15 @@ form {
     cursor: pointer;
 }
 
-.delete-button svg{
+.delete-button svg {
     pointer-events: none;
 }
 
-.delete-button svg:hover{
+.delete-button svg:hover {
     fill: red;
 }
 
-.custom-checkbox{
+.custom-checkbox {
     border: 2px solid var(--accent-color);
     border-radius: 50%;
     min-height: 20px;
@@ -124,25 +139,25 @@ form {
     transition: 200ms ease;
 }
 
-input[type="checkbox"]:checked ~ .custom-checkbox{
+input[type="checkbox"]:checked~.custom-checkbox {
     background-color: var(--accent-color);
 }
 
-input[type="checkbox"]:checked ~ .todo-text{
+input[type="checkbox"]:checked~.todo-text {
     text-decoration: line-through;
     color: var(--secondary-color);
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
     display: none;
 }
 
-@media(max-width: 500px){
-    html{
+@media(max-width: 500px) {
+    html {
         font-size: 12pt;
     }
 
-    #add-button{
+    #add-button {
         position: unset;
         width: 100%;
         margin-top: 10px;
@@ -150,7 +165,7 @@ input[type="checkbox"]{
         height: auto;
     }
 
-    h1{
+    h1 {
         margin-top: 50px;
         font-size: 15vw;
     }
