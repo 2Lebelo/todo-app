@@ -61,12 +61,20 @@
                 </svg>
             </label>
             <label for="${todoID}" class="todo-text">${todo.text}</label>
-            <button class="delete-button" aria-label="Delete todo">
-                <!-- delete icon svg -->
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" aria-hidden="true" focusable="false">
-                    <path fill="#e3e3e3" d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" />
-                </svg>
-            </button>
+            <div class="todo-actions">
+                <button class="edit-button" type="button" aria-label="Edit todo">
+                    <!-- edit icon svg -->
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" aria-hidden="true" focusable="false">
+                        <path fill="#e3e3e3" d="M200-200h48l337-337-48-48-337 337v48Zm560-417L657-720l42-42q18-18 43-18t43 18l42 42q18 18 18 43t-18 43l-42 42ZM233-120q-14 0-23.5-9.5T200-153v-87q0-8 3-15.5t9-13.5l395-395 143 143-395 395q-6 6-13.5 9t-15.5 3H233Z" />
+                    </svg>
+                </button>
+                <button class="delete-button" type="button" aria-label="Delete todo">
+                    <!-- delete icon svg -->
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" aria-hidden="true" focusable="false">
+                        <path fill="#e3e3e3" d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" />
+                    </svg>
+                </button>
+            </div>
         `;
 
         // Delete button event

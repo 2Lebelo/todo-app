@@ -121,7 +121,7 @@ form {
     transition: 200ms ease;
 }
 
-.delete-button {
+.delete-button, .edit-button {
     background: transparent;
     border: none;
     padding: 8px;
